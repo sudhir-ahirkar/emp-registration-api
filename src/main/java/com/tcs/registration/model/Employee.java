@@ -1,5 +1,7 @@
 package com.tcs.registration.model;
 
+import lombok.Builder;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Builder
 @Entity
 @Table(name = "employees")
 public class Employee {
@@ -18,6 +21,13 @@ public class Employee {
 	
 	public Employee() {
 		
+	}
+
+	public Employee(long id, String firstName, String lastName, String emailId) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailId = emailId;
 	}
 	
 	public Employee(String firstName, String lastName, String emailId) {
