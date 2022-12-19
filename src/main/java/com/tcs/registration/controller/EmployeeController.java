@@ -26,12 +26,12 @@ public class EmployeeController {
         return ResponseEntity.ok().body(empLst);
     }
 
-   /* @GetMapping("/employees/{id}")
+    @GetMapping("/employees/{id}")
     public ResponseEntity<Employee> getEmpById(@PathVariable(value = "id") Long employeeId) {
         Employee employee = employeeService.findById(employeeId);
         log.info("Employee {} has been fetched successfully",employeeId);
         return ResponseEntity.ok().body(employee);
-    }*/
+    }
 
    /* @GetMapping("/employees/{emailId}")
     public ResponseEntity<Employee> getEmpByEmailId(@PathVariable(value = "emailId") String emailId) {

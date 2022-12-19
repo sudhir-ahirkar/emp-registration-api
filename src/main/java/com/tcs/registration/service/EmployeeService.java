@@ -8,20 +8,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Slf4j
-public class EmployeeService {
+public class EmployeeService implements IEmployeeService{
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    @Override
     public Employee findById(long employeeId) {
         Employee employee = employeeRepository.findById(employeeId)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
         return employee;
     }
 
+    @Override
     public Employee findByEmailId(String emailId) {
         Employee employee = employeeRepository.findByEmailId(emailId)
                 .orElse(null);
@@ -29,6 +30,7 @@ public class EmployeeService {
     }
 
 
+    @Override
     public Employee createEmployee(Employee employee) throws ResourceNotFoundException {
 //        employeeRepository.findByEmailId(employee.getEmailId()).
 //                orElseThrow(() -> new ResourceNotFoundException("Employee already exist for this email :: " + employee.getEmailId()));
@@ -37,6 +39,7 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    @Override
     public Employee updateEmployee(long employeeId, Employee emp) {
         Employee employee = findById(employeeId);
         employee.setEmailId(emp.getEmailId());
@@ -46,11 +49,13 @@ public class EmployeeService {
         return updatedEmployee;
     }
 
+    @Override
     public void deleteEmployee(long employeeId) {
         Employee employee = findById(employeeId);
         employeeRepository.delete(employee);
     }
 
+    @Override
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
     }
