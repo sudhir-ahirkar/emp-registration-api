@@ -1,0 +1,13 @@
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/model/Employee.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/service/IEmployeeService.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/controller/Test.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/exception/ResourceNotFoundException.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/exception/ErrorDetails.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/repository/EmployeeRepository.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/service/EmployeeService.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/config/AppConfig.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/config/SwaggerConfig.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/controller/Test1.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/exception/GlobalExceptionHandler.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/controller/EmployeeController.java
+/Applications/code/git-hub-copilate/emp-registration-api/src/main/java/com/tcs/registration/EmployeeRegistrationApp.java

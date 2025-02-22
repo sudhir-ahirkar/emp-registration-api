@@ -48,6 +48,7 @@ public class EmployeeControllerTests {
 
     @Test
     public void givenEmployeeObject_whenCreateEmployee_thenReturnSavedEmployee1() throws Exception {
+        //q: how to fix this error? 
         Employee employee = Employee.builder()
                 .id(1L)
                 .firstName("Ramesh")
@@ -95,6 +96,7 @@ public class EmployeeControllerTests {
     public void givenListOfEmployees_whenGetAllEmployees_thenReturnEmployeesList() throws Exception {
         // given - precondition or setup
         List<Employee> listOfEmployees = new ArrayList<>();
+        //Q:How do I fix this builder error?
         listOfEmployees.add(Employee.builder().firstName("Ramesh").lastName("Fadatare").emailId("ramesh@gmail.com").build());
         listOfEmployees.add(Employee.builder().firstName("Tony").lastName("Stark").emailId("tony@gmail.com").build());
         given(employeeService.getAllEmployees()).willReturn(listOfEmployees);

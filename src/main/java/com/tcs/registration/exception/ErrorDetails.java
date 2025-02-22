@@ -2,6 +2,15 @@ package com.tcs.registration.exception;
 
 import java.util.Date;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Data
+@Getter
+@Setter
 public class ErrorDetails {
 	private Date timestamp;
 	private String message;
@@ -14,6 +23,7 @@ public class ErrorDetails {
 		this.details = details;
 	}
 
+/*
 	public Date getTimestamp() {
 		return timestamp;
 	}
@@ -25,4 +35,6 @@ public class ErrorDetails {
 	public String getDetails() {
 		return details;
 	}
+
+	*/
 }
