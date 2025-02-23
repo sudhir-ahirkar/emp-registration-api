@@ -30,6 +30,37 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * EmployeeControllerTests is a test class for testing the EmployeeController REST API endpoints.
+ * It uses MockMvc for performing HTTP requests and validating responses.
+ * The class is annotated with @WebMvcTest to focus on web layer testing.
+ * 
+ * The following tests are included:
+ * 
+ * 1. givenEmployeeObject_whenCreateEmployee_thenReturnSavedEmployee1:
+ *    Tests the creation of a new employee and verifies the saved employee object.
+ * 
+ * 2. givenListOfEmployees_whenGetAllEmployees_thenReturnEmployeesList1:
+ *    Tests retrieving all employees and verifies the returned list of employees.
+ * 
+ * 3. givenListOfEmployees_whenGetAllEmployees_thenReturnEmployeesList:
+ *    Tests retrieving all employees and verifies the returned list of employees using ResultActions.
+ * 
+ * 4. givenInvalidEmployeeId_whenGetEmployeeById_thenReturnEmpty:
+ *    Tests retrieving an employee by an invalid ID and verifies that a ResourceNotFoundException is thrown.
+ * 
+ * 5. givenUpdatedEmployee_whenUpdateEmployee_thenReturnUpdateEmployeeObject:
+ *    Tests updating an existing employee and verifies the updated employee object.
+ * 
+ * 6. givenUpdatedEmployee_whenUpdateEmployee_thenReturn404:
+ *    Tests updating an employee with an invalid ID and verifies that a 404 Not Found status is returned.
+ * 
+ * 7. givenEmployeeId_whenDeleteEmployee_thenReturn2001:
+ *    Tests deleting an employee by ID and verifies that a 200 OK status is returned.
+ * 
+ * The class uses @MockBean to mock the EmployeeService and EmployeeRepository dependencies.
+ * The ObjectMapper is used for converting objects to JSON strings.
+ */
 @WebMvcTest
 public class EmployeeControllerTests {
 
@@ -172,6 +203,7 @@ public class EmployeeControllerTests {
     }
 
     // JUnit test for delete employee REST API
+    
     @Test
     public void givenEmployeeId_whenDeleteEmployee_thenReturn2001() throws Exception {
         doNothing().when(employeeService).deleteEmployee(Mockito.anyLong());
